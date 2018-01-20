@@ -36,10 +36,12 @@ app.use(function(req, res, next) {
 // configuration of mongoose:
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://<ashishsah1000>:<ashish1998>@ds263137.mlab.com:63137/time");
+mongoose.connect("mongodb://ashishsah1000:ashish1998@ds263137.mlab.com:63137/time");
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
+db.once("open",function(callback){
+  console.log("connection successfull");  
+});
 
 // error handler
 app.use(function(err, req, res, next) {
