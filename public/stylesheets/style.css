@@ -6,31 +6,55 @@ body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background: url("http://ww3.hdnux.com/photos/57/72/30/12559910/3/1024x1024.jpg");
     background-size: cover;
-    -webkit-background-filter: blur(2px);
 }
 
 .content {
-    max-height: 400px;
-    max-width: 700px;
-    background: #396afc;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2948ff, #396afc);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2948ff, #396afc);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    max-height: 480px;
+    max-width: 400px;
+    background: #e2e4e6;
     padding: 40px 40px;
     border-radius: 5px;
     box-shadow: 2px 2px 2px 2px rgba(22, 22, 22, .7);
-    color: white;
+    color: grey;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 30px;
+}
+
+.content h4 {
+    font-size: 26px !important;
 }
 
 .reg_bg {
-    background: #070000;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #070000, #4C0001, #070000);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #070000, #4C0001, #070000);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: white;
+}
+
+input {
+    border: 1.5px solid rgb(8, 185, 76) !important;
+    font-size: 22px !important;
+    padding-left: 20px !important;
+    border-radius: 5px !important;
+    background: none !important;
+}
+
+.content input {
+    border: 1.5px solid rgb(8, 185, 76) !important;
+    font-size: 22px !important;
+    padding-left: 20px !important;
+    border-radius: 5px !important;
+    background: none !important;
+}
+
+.error {
+    color: rosybrown;
+    background: rgba(222, 22, 22, .7);
+    width: 70%;
+    margin: 0px auto;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(22, 22, 22, .7);
+    padding: 10px 20px;
+}
+
+.error h5 {
+    font-size: 14px !important;
 }

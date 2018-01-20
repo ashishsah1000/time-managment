@@ -3,22 +3,37 @@
   <%- include ../header.ejs %>
   <body>
   <%- include ../includes/nav.ejs %>
+
+   <% for(var i=0; i<error.length; i++) { %>
+        <div class="error">
+               <h5> <%= error[i].msg %></h5>
+        </div> 
+    
+    <% } %>
+
    <div class="content reg_bg">
      <h4>Let's get started :</h4>
      <form method="post" action="/register">
      <div class="row">
         <div class="input-field col s12">
-          <input id="e-mail" type="email" class="validate" name="email">
-          <label for="e-mail">e-mail</label>
+          <input id="e-mail" type="email" class="validate" name="email" placeholder="email">
+
         </div>
       </div>
-       <div class="row">
+       <div class="row" style="margin-top:-25px;">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate" name="password">
-          <label for="password">Password</label>
+          <input id="password" type="password" class="validate" name="password" placeholder="password">
+        </div>
+        <div class="row" style="margin-top:-25px;">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" name="samepassword" placeholder="confirm password">
+        </div>
+        <div class="row" style="margin-top:-25px;">
+        <div class="input-field col s12">
+          <input id="password" type="text" class="validate" name="username" placeholder="username">
         </div>
       </div>
-      <button type="submit" class="btn red blue-text"> Submit </button>
+      <button type="submit" class="btn blue btn-large" style="margin-left:100px;"> Submit </button>
      </form>
    </div>
 
