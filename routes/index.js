@@ -40,7 +40,7 @@ router.post('/register', function(req, res, next) {
                     console.log(err);
                 else {
                     console.log("saved successfull");
-                    res.render("auth/signup", { title: "tropo", error: "" });
+                    res.render("auth/login", { title: "tropo", error: "" });
                 }
 
             });
