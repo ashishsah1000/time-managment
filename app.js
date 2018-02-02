@@ -9,7 +9,7 @@ var expressValidator = require('express-validator');
 
 // authentication packages
 var session = require('express-session');
-var passport = require("passport-js")
+var passport = require("passport")
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -59,6 +59,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once("open", function(callback) {
     console.log("connection successfull");
 });
+// serialize and deserialize users
+
 
 // error handler
 app.use(function(err, req, res, next) {

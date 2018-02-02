@@ -26,7 +26,7 @@ router.post('/register', function(req, res, next) {
     } else {
         var pass = req.body.password;
         console.log(pass);
-        var fpass = "";
+ 
         bcrypt.hash(pass, saltRounds, function(err, hash) {
             // Store hash in your password DB.
             var posted = new Users({
