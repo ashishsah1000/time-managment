@@ -8,7 +8,7 @@ const saltRounds = 10;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('auth/login', { title: 'Express' });
+    res.render('auth/login', { title: 'Express',error:false});
 });
 router.get('/signup', function(req, res, next) {
     res.render('auth/signup', { title: 'Express', error: "" });
@@ -51,6 +51,16 @@ router.post('/register', function(req, res, next) {
 
     }
 
+});
+router.post("/login",function(req,res,next){
+   var email=req.body.email;
+   var password=req.body.password;
+   console.log(email +" "+ password);
+   Users.findOne({'email':email},function(err,docs){
+       if(err)throw err;
+        if(docs==null)
+            res.render("auth/login",{title:"Re-Login",error:"user does not exist"})
+   });
 });
 
 module.exports = router;

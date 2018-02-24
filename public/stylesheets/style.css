@@ -45,8 +45,8 @@ input {
 }
 
 .error {
-    color: rosybrown;
-    background: rgba(222, 22, 22, .7);
+    color: grey;
+    background: rgba(222, 222, 222, .8);
     width: 70%;
     margin: 0px auto;
     margin-top: 5px;

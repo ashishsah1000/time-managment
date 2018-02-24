@@ -3,9 +3,16 @@
   <%- include ../header.ejs %>
   <body>
   <%- include ../includes/nav.ejs %>
+        <%if (error) { %>
+              <div class="error">
+               <h5> <%= error %></h5>
+            </div> 
+  
+          <% } %>
+
    <div class="content">
      <h4 align="center">It's time to focus on work :</h4>
-     <form>
+     <form method="post" action="/login">
      <div class="row">
         <div class="input-field col s12">
           <input id="e-mail" type="email" class="validate" name="email" placeholder="Username">

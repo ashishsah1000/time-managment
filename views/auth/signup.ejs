@@ -3,13 +3,19 @@
   <%- include ../header.ejs %>
   <body>
   <%- include ../includes/nav.ejs %>
-
-   <% for(var i=0; i<error.length; i++) { %>
+  
+  <%if (error) { %>
+  
+      <% for(var i=0; i<error.length; i++) { %>
         <div class="error">
                <h5> <%= error[i].msg %></h5>
         </div> 
     
     <% } %>
+
+        <% } %>
+
+   
 
    <div class="content reg_bg">
      <h4>Let's get started :</h4>
